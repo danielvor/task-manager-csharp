@@ -12,6 +12,13 @@ builder.Services.AddOpenApi();
 
 var app = builder.Build();
 
+// Auto-criação do banco de dados SQLite para Deploy na nuvem
+using (var scope = app.Services.CreateScope())
+{
+    var db = scope.ServiceProvider.GetRequiredService<TaskManager.Api.Data.AppDbContext>();
+    db.Database.EnsureCreated();
+}
+
 // Configure the HTTP request pipeline.
 app.UseCors(policy => policy.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
 
