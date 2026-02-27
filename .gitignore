@@ -1,0 +1,29 @@
+# Build and release
+bin/
+obj/
+
+# User-specific files
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# CodeRush personal settings
+.cr/personal
+
+# Visual Studio files
+.vscode/
+.vs/
+
+# Entity Framework Core SQLite database
+*.db
+*.db-shm
+*.db-wal
+
+# macOS
+.DS_Store
+
+# Logs
+logs/
+*.log
